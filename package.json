@@ -1,0 +1,33 @@
+{
+  "name": "new-roller",
+  "version": "1.0.0",
+  "description": "New roller for https://sao-rpg.com/",
+  "repository": "git@github.com:SAO-RPG/new-roller.git",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^8.0.0",
+    "pinst": "^3.0.0"
+  },
+  "scripts": {
+    "commit": "cz",
+
+    "postinstall": "husky install",
+    "prepare": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "packageManager": "yarn@3.2.3",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
