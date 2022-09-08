@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: Automatic merge on approval
+    conditions:
+      # Requires someone with write/maintain/admin permissions to approve it
+      - "#approved-reviews-by>=1"
+      - linear-history
+      - not: conflict
+    actions:
+      merge:
+        method: fast-forward
