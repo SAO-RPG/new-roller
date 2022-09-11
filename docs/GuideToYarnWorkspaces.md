@@ -32,7 +32,7 @@ repos:
 3. Setup the workspace directory.
    1. If you are using a create-app initializer, direct the initializer to set
       up the project in the workspace directory.
-   2. If you are setting up the workspace from scatch, add a `package.json` to
+   2. If you are setting up the workspace from scratch, add a `package.json` to
       the workspace directory and add a key-value pair for the `name` property.
       The value will be the workspace name.
 4. **(Optional)** Initialize the workspace by editing `package.json` or running
