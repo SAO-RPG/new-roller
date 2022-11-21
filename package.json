@@ -4,7 +4,7 @@
   "description": "New roller for https://sao-rpg.com/",
   "repository": "git@github.com:SAO-RPG/new-roller.git",
   "workspaces": [
-    "src/*"
+    "frontend/src"
   ],
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

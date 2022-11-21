@@ -1,0 +1,8 @@
+{
+    "eslint.packageManager": "yarn",
+    "eslint.workingDirectories": [
+        {"directory": "src/frontend", "changeProcessCWD": true},
+        {"directory": "frontend/src", "changeProcessCWD": true}
+    ],
+    "files.eol": "\n",
+}
