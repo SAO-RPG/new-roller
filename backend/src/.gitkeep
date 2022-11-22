@@ -1,0 +1,23 @@
+@Bean
+@Primary
+@ConfigurationProperties(prefix="app.datasource")
+public DataSourceProperties dataSourceProperties() {
+	return new DataSourceProperties();
+}
+
+@Bean
+@ConfigurationProperties("app.datasource.configuration")
+public HikariDataSource dataSource(DataSourceProperties properties) {
+	return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+}
+
+app.datasource.url=jdbc:mysql://localhost/test
+app.datasource.username=dbuser
+app.datasource.password=dbpass
+app.datasource.configuration.maximum-pool-size=30
+
+/*
+ * app.datasource.url=jdbc:h2:mem:mydb
+ * app.datasource.username=sa
+ * app.datasource.pool-size=30
+ */
